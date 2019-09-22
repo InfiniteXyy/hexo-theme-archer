@@ -1,19 +1,21 @@
 // ========== paginator ========== //
 .page-nav {
-  padding: 1rem 0 0.5rem 0;
+  padding: 2rem 0 0.5rem 0;
   display: flex;
   justify-content: center;
   & > * {
-    font: 1.4rem $feature-font-family;
-    color: #252525;
+    font: 1.2rem $feature-font-family;
+    color: $feature-color;
     vertical-align: middle;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
     text-align: center;
   }
   a {
     position: relative;
-    color: #ccc;
+    color: #9b9b9b;
     overflow: visible;
-    @include hover-line($color: #ccc);
+    &:hover {
+      color: $feature-color;
+    }
   }
 }

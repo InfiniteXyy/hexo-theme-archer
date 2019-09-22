@@ -2,6 +2,7 @@
 @import '_variables';
 
 // ========== common ========== //
+
 .container {
   flex-direction: column-reverse;
   margin: 0 auto;
@@ -13,8 +14,11 @@
 .profile {
   margin: 1rem auto;
   .profile-avatar {
-    width: 60%;
+    width: 30%;
     margin: 0 auto;
+  }
+  .profile-name {
+    font-size: 1.5rem;
   }
   .profile-social {
     display: none;
@@ -26,7 +30,7 @@
 }
 
 .footer {
-  padding-top: 0;
+  display: none;
 }
 
 .post-page {
@@ -45,6 +49,18 @@
 }
 
 // ========== intro ========== //
+.index-post-header {
+  flex-direction: column;
+}
+.abstract-tags .post-tag {
+  margin: 0 6px 0 0;
+}
+
+.index-post .abstract-content {
+  margin-top: 1rem;
+  line-height: 1.7;
+}
+
 .home-body {
   .site-intro-meta {
     width: 100%;
@@ -60,15 +76,20 @@
   }
 }
 
+.intro-subtitle {
+  margin-top: 1rem;
+}
+
 .about-body,
 .post-body {
   .site-intro-meta {
     min-width: 0;
-    width: 80%;
+    width: 86%;
   }
   .intro-title {
-    font-size: 2.6rem;
-    line-height: 2.8rem;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 1rem;
   }
   .intro-subtitle {
     font-size: 1.5rem;
@@ -77,6 +98,7 @@
   }
   .main {
     width: 86%;
+    padding-bottom: 4rem;
   }
 }
 
@@ -90,11 +112,19 @@
 }
 
 // ========== content ========== //
+ul {
+  padding-inline-start: 1rem;
+}
 .post-paginator {
-  .previous,
-  .next {
-    float: none;
-    margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  .prevSlogan,
+  .prevTitle,
+  .nextSlogan,
+  .nextTitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 

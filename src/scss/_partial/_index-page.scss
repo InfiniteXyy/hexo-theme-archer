@@ -6,14 +6,19 @@
   z-index: 3;
 }
 
+.index-post-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 // ========== abstract content ========== //
 .index-post {
   .abstract-content {
-    color: #9c9c9c;
+    color: #4c4c4c;
     font-size: 1rem;
-    line-height: 1.6rem;
-    font-weight: lighter;
+    line-height: 2rem;
     word-break: break-word;
+    margin-top: 1.5rem;
     img {
       max-width: 100%;
       box-shadow: none;
@@ -23,15 +28,13 @@
 
 // ========== abstract title ========== //
 .abstract-title {
-  line-height: 2.5rem;
+  font-size: 1.625rem;
+  line-height: 2.3rem;
   color: $index-post-link-color;
-  padding-bottom: 0.5rem;
-  span:last-of-type {
-    transition: color 0.1s ease-in;
-    font-size: 1.7rem;
-    &:hover {
-      color: $feature-color;
-    }
+  font-weight: 500;
+  transition: color 0.1s ease-in;
+  &:hover {
+    color: $feature-color;
   }
 }
 
@@ -50,18 +53,21 @@
   height: 1.5rem;
 }
 
+.abstract-date {
+  margin-top: 0.56rem;
+  font-size: 0.82rem;
+  color: rgba(0,0,0,0.5);
+}
+
 // tags
 .post-tag {
   font-size: 1rem;
   position: relative;
   color: $index-post-tag-color;
   margin-left: 0.4rem;
-  font-weight: lighter;
-  &::before {
-    margin-right: 2px;
-    content: '#';
+  &:hover {
+    color: $feature-color;
   }
-  @include hover-line($color: $index-post-tag-color);
 }
 
 .abstract-calander {

@@ -9,7 +9,7 @@ $base-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial,
   'Microsoft JhengHei', 'Source Han Sans SC', 'Noto Sans CJK SC',
   'Source Han Sans CN', 'Noto Sans SC', 'Source Han Sans TC', 'Noto Sans CJK TC',
   'WenQuanYi Micro Hei', SimSun, sans-serif;
-$feature-font-family: 'Oswald-Regular';
+$feature-font-family: $base-font-family;
 $base-font-size: 16px !default;
 
 // ========== common ========== //
@@ -41,7 +41,7 @@ $header-border-top-color: rgba(0, 0, 0, 0.75);
 // ========== profile ========== //
 $profile-width: 200px;
 // ========== index ========== //
-$index-post-link-color: #787878;
+$index-post-link-color: #4a4a4a;
 $index-post-tag-color: #aaa;
 // ========== post ========== //
 $post-content-color: #23394d;

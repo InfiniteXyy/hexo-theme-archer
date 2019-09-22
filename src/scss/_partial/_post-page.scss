@@ -18,12 +18,14 @@
 .about-body {
   .site-intro-meta {
     width: 50%;
+    height: 80%;
     min-width: 42.8125rem;
     margin: 0 auto;
     align-items: flex-start;
+    justify-content: flex-end;
   }
   .intro-title {
-    font: 4rem/5.3rem $feature-font-family;
+    font-size: 2.875rem;
     color: #fff;
     margin: 0;
   }
@@ -42,11 +44,8 @@
     margin-left: 0;
     margin-right: 0.5rem;
     font-size: 1.2rem;
-    color: #fff;
+    color: $index-post-tag-color;
     @include hover-line($color: #fff);
-    &::before {
-      content: '#';
-    }
   }
 }
 
@@ -193,17 +192,8 @@
     color: #252525;
   }
 
-  .nextSlogan {
-    &::before {
-      content: '< ';
-      font-size: 1.7rem;
-    }
-  }
-  .prevSlogan {
-    &::after {
-      content: ' >';
-      font-size: 1.7rem;
-    }
+  .previous {
+    text-align: end;
   }
 }
 
@@ -218,10 +208,12 @@
   ul,
   ul li {
     list-style-type: initial;
+    line-height: 2;
   }
   ol,
   ol li {
-    list-style-type: decimal-leading-zero;
+    list-style-type: decimal;
+    line-height: 2;
   }
   @for $i from 1 through 6 {
     h#{$i} {
@@ -258,7 +250,7 @@
     margin: 1rem 0;
   }
   p {
-    line-height: 1.625;
+    line-height: 2;
   }
   em {
     font-style: italic;
@@ -354,10 +346,11 @@
 }
 
 .toc-catalog {
-  color: #bbb;
+  color: #4a4a4a;
   cursor: pointer;
   user-select: none;
-  font: bolder 1.2rem $feature-font-family;
+  font: 500 1.2rem $feature-font-family;
+  margin-bottom: 1rem;
   &:hover {
     color: $feature-color;
   }
@@ -381,8 +374,8 @@
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
     opacity: 1;
   }
-  ol {
-    padding-left: 1rem;
+  ol li {
+    line-height: 1.6;
   }
   .toc-number {
     font-weight: bold;
@@ -397,7 +390,6 @@
 
 .toc-hide-children {
   & > * {
-    transform: translate(-100%, 0);
     opacity: 0;
   }
   .toc-catalog {
